@@ -125,6 +125,7 @@ void load_into_memory() {
     // 4. Load data
     fseek(f, location, SEEK_SET);
     fread(mem_buf, unit_size, length, f);
+    mem_count = length * unit_size;
     
     printf("Loaded %d units into memory\n", length);
 
